@@ -33,7 +33,7 @@ public class Surefire1146RerunFailedAndParameterized
     @Test
     public void testsAreRerun()
     {
-        OutputValidator outputValidator = unpack( "surefire-1146-rerunFailingTests-with-Parameterized" ).debugLogging().executeTest();
+        OutputValidator outputValidator = unpack( "surefire-1146-rerunFailingTests-with-Parameterized" ).sysProp("trimStackTrace", "false").executeTest();
         verify(outputValidator, 8, 0, 0, 0, 5);
     }
 

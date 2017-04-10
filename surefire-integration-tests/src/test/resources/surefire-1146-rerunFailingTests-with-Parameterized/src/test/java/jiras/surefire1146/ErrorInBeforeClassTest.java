@@ -10,8 +10,7 @@ public class ErrorInBeforeClassTest {
 
     private static boolean success;
 
-    @BeforeClass
-    public static void beforeClass() {
+    static  {
         System.out.println( "Running JUnit " + Version.id() );
         System.out.println( "success " + success );
         boolean current = success;
