@@ -97,6 +97,8 @@ public final class JUnit4ProviderUtil
         for ( Failure failure : allFailures )
         {
             Description description = failure.getDescription();
+            System.out.println ( "Description.isTest(): " + description.isTest() );
+            System.out.println ( "Description.getChildren: " + description.getChildren() );
             if ( description.isTest() && !isFailureInsideJUnitItself( description ) )
             {
                 ClassMethod classMethod = cutTestClassAndMethod( description );
